@@ -127,6 +127,8 @@ vector<string> get_expressions(vector<string> list_expressions, vector<char> lis
         {
             if(char_expression == '+' || char_expression == '*' || char_expression == '(' || char_expression == ')' || char_expression == invert_symbol)
                 continue;
+            else if(char_expression == 'x' || char_expression == 'X')
+                valid_expression=false;
             else if(find(list_variables.begin(),list_variables.end(),char_expression) == list_variables.end())
             {
                 cout<<"You entered an incorrect letter:"<<char_expression<<endl;
